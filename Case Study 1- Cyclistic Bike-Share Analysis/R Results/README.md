@@ -471,7 +471,7 @@ write.csv(counts, file = file_path, row.names = FALSE)
 
 * This is the site I used to create the Rmd sections: [R Markdown Guide](https://rmarkdown.rstudio.com/lesson-15.html)
 
-* My Rmd file: []()
+* My Rmd file: [Case Study 1 - Cyclistic Bike-Share Analysis](https://github.com/schmiedel1992/Capstone-Case-Study-Projects/blob/7c7ee65baaf590cc2126852536fd5d89e30cdede/Case%20Study%201-%20Cyclistic%20Bike-Share%20Analysis/R%20Results/CaseStudy1.Rmd)
 
 * Although Rmd files take time to create, they are worth the effort, and if desired, different formats can be applied, creating distinct fonts and layouts. 
 
