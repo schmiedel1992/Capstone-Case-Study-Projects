@@ -1,0 +1,345 @@
+---
+title: "Case Study 1: Cyclistic Bike-Share Analysis"
+author: "Amanda Schmiedel"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+<a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=amanda-schmiedel" target="_blank">Follow on LinkedIn</a>
+
+## Introduction
+
+Welcome to my Capstone Case Study for Cyclistic. We will dive into the data analysis process to answer stakeholder questions and recommend actionable insights for data-driven decisions. 
+
+## About Cyclistic
+
+Cyclistic, a bike-sharing company in Chicago with a fleet of over 5,800 bikes, aims to increase annual memberships. Casual riders, who currently purchase single-ride or full-day passes, are less profitable for Cyclistic than annual members. However, the pricing flexibility has helped attract more customers. Cyclistic's finance analysts have concluded that maximizing the number of annual members will be key to future growth. Lily Moreno, director of marketing, believes converting casual riders into members is a solid opportunity and set a goal to design marketing strategies aimed at this conversion. To better understand how to achieve this goal, her team needs to analyze historical data to identify trends and differences between annual members and casual riders.
+
+### Assumptions and Theories:
+
+Based on the information provided, we can make some initial assumptions and theories. We may assume that annual members and casual riders
+exhibit distinct patterns in bike usage, ride duration, and frequency. Theorizing that annual members, being more committed, would have
+longer average ride durations and a higher usage frequency compared to casual riders, we also speculate that factors such as 
+cost-effectiveness, convenience, carbon footprint awareness, and exclusive benefits may motivate casual riders to transition 
+into annual members.
+
+
+### Problem
+
+Three questions will guide the future marketing program:
+
+1. How do annual members and casual riders use Cyclistic bikes differenty? **Task given by our manager, Lily Moreno.**
+
+2. Why would casual riders buy Cyclistic's annual memberships?
+
+3. How can Cyclistic use digital media to influence casual riders to become annual members?
+
+
+### Deliverables
+
+**1. A clear statement of the business task.**
+
+Our overarching goal is to drive the conversion of casual riders into devoted annual members, foster long-term loyalty, and maximize the growth of Cyclistic.
+
+**2. A description of sourced data.**
+
+Cyclistic's historical trip data, based on the last annual cycle from April 2023 to March 2024. Motivate International Inc. has made the data available under this [License](https://divvybikes.com/data-license-agreement)
+
+**3. Documentation of any cleaning or manipulation of data.**
+
+All Excel, SQL, and R cleaning and manipulation are found in the [GitHub Capstone-Case-Study-Projects repository "Case Study 1 - Cyclistic Bike-Share Analysis"](https://github.com/schmiedel1992/Capstone-Case-Study-Projects) in extensive detail.
+
+**4. A Summary of Analysis**
+
+The analysis of bike ride data reveals several key insights into user behavior and system performance. Overall, the annual average ride length for all users stands at 16 minutes and 07 seconds, with casual riders taking longer rides averaging 23 minutes and 05 seconds compared to members' average of 12 minutes and 18 seconds. July emerges as the month with the largest variety of ride length durations, totaling 11,042 unique durations out of 20,011 distinct lengths recorded throughout the year. While customer usage peaks in August and declines in January, both casual and member riders show consistent usage patterns from May to October, with a notable drop from November to April. Peak usage occurs during late afternoons, especially between 3-6pm, and differs between casual riders, who peak on Saturdays, and members, who peak on Thursdays. Despite members constituting the majority of riders, casual riders contribute significantly to weekend usage, comprising 35.34% of rides compared to members' 64.66%. Further analysis of top-performing days, ride lengths, and popular rideable types enriches our understanding of user preferences and system dynamics, underscoring the importance of tailored strategies to accommodate diverse user behaviors.
+
+**5. Visualizations and key findings.**
+
+All Excel, SQL, and R-supporting visualizations are found in the[GitHub Capstone-Case-Study-Projects repository "Case Study 1 - Cyclistic Bike-Share Analysis"](https://github.com/schmiedel1992/Capstone-Case-Study-Projects) in extensive detail.
+
+**6. Top 3 recommendations for stakeholders.**
+To drive the conversion of casual riders into devoted annual members, foster long-term loyalty, and maximize the growth of Cyclistic, stakeholders should consider the following recommendations:
+
+**Promotional Incentives for Membership Conversion:** Implement targeted marketing campaigns offering exclusive discounts, perks, or incentives to encourage casual riders to sign up for annual memberships. Providing trial memberships or discounted rates for the first year can entice casual riders to experience the benefits of membership, such as unlimited rides, priority access to bikes, and member-exclusive events.
+
+**Enhanced User Experience and Engagement:** Invest in improving the overall user experience of the Cyclistic platform and mobile app to enhance convenience, ease of use, and engagement for both casual and member riders. Introduce features such as personalized recommendations, rewards programs, and interactive challenges to incentivize continued usage and foster a sense of community among members.
+
+**Data-Driven Targeting and Customization:** Utilize data analytics and segmentation techniques to identify key demographics, usage patterns, and preferences among casual riders. Tailor marketing messages, service offerings, and member benefits based on these insights to effectively target and engage potential members with personalized offers and experiences that resonate with their needs and interests.
+
+By implementing these recommendations, Cyclistic can drive higher conversion rates of casual riders into loyal annual members, foster long-term customer loyalty, and achieve sustainable growth by maximizing user retention and satisfaction.
+
+## Solution:
+
+In truth, the solution is beyond our assigned task. Any implications are nothing more than speculation without answering the other two
+stakeholder questions. However, what our question can tell you are facts about the difference between annual members and causal riders. 
+With that said, from April 2023 to March 2024:
+
+* Annual average ride length for all users = 16 minutes and 07 seconds.
+* Annual average ride length for casual riders = 23 minutes and 05 seconds.
+* Annual average ride length for members = 12 minutes and 18 seconds.
+* The bikes were rented on all '7' days of the week every month.
+* July contains the largest set of unique ride length durations, 11,042.
+* Total Distinct ride lengths for the year was 20,011.
+* Customer usage peaked in August and was worse in January.
+* TotalRows for year 4,355,499.
+* More investigation is required to answer how a customer may only use the bike for 1 second.
+* All max ride_lengths are around the same, 23-24 hours.
+* July had the longest ride length at 18:22.
+* The annual average is 16:07 for all user types.
+* May to October contain the majority of rides annually.
+* November to April are the low points.
+* For Casual riders.
+  * April to October contain the majority of rides annually
+  * November to March are the low points.
+  * July is the most popular month.
+  * January is the least popular month.
+* For members.
+  * April to November contain the majority of rides annually.
+  * December to March are the low points.
+  * August is the most popular month.
+  * January is the least popular month.
+* Peak for Casual = Saturday.
+* Peak for Members = Thursday.
+* Members top days are during the week.
+* Casuals top days are during the weekend.
+* The most common time to use bikes for both user types = 3-6pm.
+* Peak rides in DESC order by day, by hour, by user type.
+  * There are 336 rows here. One row for each hour in a day of the week for a year per user type.
+* Distribution of casual vs member user types.
+  * Ride date range 04-2023 to 03-2024.
+  * Casual riders = 35.34%.
+  * Member riders = 64.66%.
+* Average casual ride duration for top 5 is: 7:00.
+  * Total number members for top 5: 46,548.
+  * 29.12% of all users in the top 5 are casual.
+* Average member ride duration for top 5 is: 6:00.
+  * Total number members for top 5: 113,366.
+  * 70.88% of all users in the top 5 are member.
+* Saturday is the most popular day to rent a bike.
+* By member_casual. There are more member riders than casual on an annual basis.
+* By ride_length. 5:00 minutes is the most common rental duration annually.
+* By rideable_type total per type. Classic bikes are the most popular product of the three.
+
+### Excel Results
+[Excel](https://github.com/schmiedel1992/Capstone-Case-Study-Projects/tree/6e9c11fbeb836d85ca042b374a93dcfa5f9250c5/Case%20Study%201-%20Cyclistic%20Bike-Share%20Analysis/Excel%20Results)
+
+### Over 30 SQL Query Results
+[SQL]https://github.com/schmiedel1992/Capstone-Case-Study-Projects/tree/6e9c11fbeb836d85ca042b374a93dcfa5f9250c5/Case%20Study%201-%20Cyclistic%20Bike-Share%20Analysis/SQL%20Results
+
+### R Results
+Present in this Rmd file at the bottom of the page
+
+
+## Conclusion:
+
+The findings of this case study provide valuable insights into the differences between annual members and casual riders of Cyclistic. The analysis revealed that casual riders tend to take longer rides, while annual members prefer shorter rides. Additionally, casual riders are more likely to use the bikes on weekends and on top-performing days, while members exhibit a consistent usage pattern throughout the week. This information can help Cyclistic develop targeted marketing strategies to convert casual riders into annual members. By offering incentives, enhancing the user experience, and utilizing data-driven insights, Cyclistic can increase the number of annual members and achieve sustainable growth. In conclusion, leveraging the comprehensive analysis of Cyclistic's bike ride data, the company can develop tailored strategies to drive membership conversion, foster long-term loyalty, and maximize growth. By implementing recommendations such as promotional incentives and user experience enhancements, Cyclistic is poised to capitalize on opportunities and thrive in the competitive urban transportation market.
+
+## Next steps:
+
+<ol>
+
+<li> We should collaborate with the rest of the team and bring together their insights from the questions Lily Moreno assigned them. 
+Then I would suggest we consider running promotions targeted at casual users and utilizing targeted advertising in their most frequent
+locations. </li>
+
+
+<li> I would suggest gaining additional data from all users by creating surveys for each type that they receive via email or after a
+purchase, which would preferably include: </li>
+
+* Preferred payment options: Investigate whether annual members and casual riders have preferences for specific payment options, such as
+credit cards, mobile apps, or in-person payments.
+
+* Demographic factors: Explore if there are any demographic differences between annual members and casual riders, such as age, gender, or
+income level, that could influence their bike usage behavior.
+
+* Purpose of rides: Examine the purpose of bike rides for annual members and casual riders. Do annual members primarily use bikes for
+commuting, while casual riders use them for leisure or recreational purposes?
+
+
+With all that new data, create user-specific marketing, such as:
+
+* Develop targeted marketing campaigns for members and casual users separately. Highlight the convenience, cost-effectiveness, and
+environmental benefits of membership to attract and retain members. For casual users, emphasize the flexibility and leisurely experience 
+and create promotions to encourage weekday ridership.
+
+* Seasonal Promotions: Capitalize on the popularity of July by introducing special promotions, such as discounted membership rates, 
+extended riding hours, or partnerships with local events and attractions. Additionally, for December, consider offering holiday-themed
+incentives, such as festive decorations, seasonal rides, or charity initiatives, to engage riders and increase usage.
+
+
+<li>  Lastly, I would continuously monitor and analyze rider data to identify emerging trends, patterns, and areas for improvement. 
+This will enable the bike-sharing program to make informed decisions and adapt strategies to evolving user needs. </li>
+
+</ol>
+
+By implementing these recommendations, Cyclistic can foster a more personalized and enjoyable experience for both members and casual users.
+This tailored approach will not only attract new riders but also increase rider loyalty and engagement, leading to sustainable growth and 
+a competitive edge in the market.
+
+The proposed solutions gained from data analysis aim to enhance marketing efficiency by utilizing targeted strategies in advertising and
+surveys for each respective user type. Cylistic can position itself for sustained growth while fostering a positive impact on the community
+and promoting sustainable transportation.
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r Install package, include=FALSE}
+#install.packages("tidyverse")
+```
+
+
+```{r Load package, include=FALSE}
+library(tidyverse)
+```
+
+
+``` {r Upload datasets, include=FALSE}
+db1 <- read_csv("202304-tripdata.csv")
+db2 <- read_csv("202305-tripdata.csv")
+db3 <- read_csv("202306-tripdata.csv")
+db4 <- read_csv("202307-tripdata.csv")
+db5 <- read_csv("202308-tripdata.csv")
+db6 <- read_csv("202309-tripdata.csv")
+db7 <- read_csv("202310-tripdata.csv")
+db8 <- read_csv("202311-tripdata.csv")
+db9 <- read_csv("202312-tripdata.csv")
+db10 <- read_csv("202401-tripdata.csv")
+db11 <- read_csv("202402-tripdata.csv")
+db12 <- read_csv("202403-tripdata.csv")
+```
+
+
+``` {r Stack individual data frames into one big data frame}
+all_trips <- bind_rows(db1,db2,db3,db4,db5,db6,db7,db8,db9,db10,db11,db12)
+```
+
+
+``` {r Remove lat and long}
+all_trips <- all_trips %>% select(-c(start_lat, start_lng, end_lat, end_lng))
+```
+
+
+``` {r Making ride_length the col_type the instructions want}
+all_trips$ride_length <- as.numeric(as.POSIXlt(all_trips$ride_length, format = "%H:%M:%S"))
+```
+
+
+``` {r Inspect the new table that has been created}
+colnames(all_trips)  #List of column names
+nrow(all_trips)  #How many rows are in data frame?
+dim(all_trips)  #Dimensions of the data frame?
+head(all_trips)  #See the first 6 rows of data frame.  Also tail(all_trips)
+str(all_trips)  #See list of columns and data types (numeric, character, etc)
+summary(all_trips)  #Statistical summary of data. Mainly for numerics
+```
+
+
+```{r Add columns that list the date, month, day, and year of each ride}
+all_trips$date <- as.Date(all_trips$started_at, format = "%m/%d/%Y %H:%M") 
+all_trips$month <- format(as.Date(all_trips$date), "%m")
+all_trips$day <- format(as.Date(all_trips$date), "%d")
+all_trips$year <- format(as.Date(all_trips$date), "%Y")
+all_trips$day_of_week <- format(as.Date(all_trips$date), "%A")
+```
+
+
+``` {r Remove "bad" data}
+all_trips_v2 <- all_trips[!(all_trips$start_station_name == "HQ QR" | all_trips$ride_length<0),]
+```
+
+
+``` {r Descriptive analysis on ride_length (all figures in seconds)}
+mean(all_trips_v2$ride_length) 
+median(all_trips_v2$ride_length) 
+max(all_trips_v2$ride_length) 
+min(all_trips_v2$ride_length)
+```
+
+
+``` {r You can condense the four lines above to one line using summary() on the specific attribute}
+summary(all_trips_v2$ride_length)
+```
+
+
+``` {r Compare members and casual users}
+aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual, FUN = mean)
+aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual, FUN = median)
+aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual, FUN = max)
+aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual, FUN = min)
+```
+
+
+``` {r the days of the week are out of order. we must fix that.}
+all_trips_v2$day_of_week <- ordered(all_trips_v2$day_of_week, 
+  levels=c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"))
+```
+
+
+``` {r See the average ride time by each day for members vs casual users rounded up to make it easier to understand} 
+aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual + all_trips_v2$day_of_week, FUN = function(x) round(mean(x), 2))
+```
+
+
+``` {r we must format "started_at" to utilize further investigations}
+all_trips_v2 <- all_trips_v2 %>%
+  mutate(started_at = as.POSIXct(started_at, format = "%m/%d/%Y %H:%M"))
+```
+
+
+``` {r analyze ridership data by type and weekday}
+all_trips_v2 %>%
+  mutate(weekday = wday(started_at, label = TRUE)) %>%
+  group_by(member_casual, weekday) %>%
+  summarise(
+    number_of_rides = n(),
+    average_duration = mean(ride_length)
+  ) %>%
+  arrange(member_casual, weekday)
+```
+
+
+``` {r visualize the number of rides by rider type}
+all_trips_v2 %>%
+  mutate(weekday = wday(started_at, label = TRUE)) %>%
+  group_by(member_casual, weekday) %>%
+  summarise(
+    number_of_rides = n(),
+    average_duration = mean(ride_length)
+    ) %>%
+  arrange(member_casual, weekday) %>%
+  ggplot(aes(x = weekday, y = number_of_rides, fill = member_casual)) +
+  geom_col(position = "dodge") +
+  scale_y_continuous(labels = scales::comma) +
+  labs(title = "Total Annual Rides by Weekday")
+```
+
+
+``` {r create a visualization for average duration in minutes}
+all_trips_v2 %>%
+  mutate(weekday = wday(started_at, label = TRUE)) %>%
+  group_by(member_casual, weekday) %>%
+  summarise(
+    number_of_rides = n(),
+    average_duration = mean(ride_length)
+    ) %>%
+  arrange(member_casual, weekday) %>%
+  ggplot(aes(x = weekday, y = average_duration / 60, fill = member_casual)) +
+  geom_col(position = "dodge") +
+  scale_y_continuous(labels = scales::comma) +
+  labs(title = "Average Annual Ride Duration by Weekday", y = "Average Duration (minutes)")
+```
+
+
+``` {r Create a csv file that we will visualize in Excel and Tableau, include=FALSE}
+counts <- aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual + all_trips_v2$day_of_week, FUN = mean)
+
+file_path <- "C:/Users/Amanda/OneDrive/Desktop/Capstone/Cyclistic/R/avg_ride_length.csv"
+
+write.csv(counts, file = file_path, row.names = FALSE)
+```
+
+
