@@ -5,7 +5,7 @@
 
 ## Installation
 <details>
-  <summary> **Details** </summary>
+  <summary> Details </summary>
   
 ### Click here  [R](https://cloud.r-project.org/bin/windows/base/R-4.3.0-win.exe)
 
@@ -22,7 +22,7 @@
   * The far top-right has a tab just below the RStudio "Close tab." Click it > New Project > New Directory > New Project >  Name your directory and its location > Create Project.
   
 <details>
-  <summary>**Settings**</summary> 
+  <summary>Settings</summary> 
   
   * To change RStudio to nightmode: Tools > Global Options > Appearance > Editor theme > "Tomorrow Night" is my current selection.
   * I prefer this pane layout. I ask that you consider it yourself. To change it: View > Panes > Pane Layout. However, it is all preference: 
@@ -36,19 +36,19 @@
 ## Uploading 
 
 <details>
-    <summary>**Details**</summary>
+    <summary>Details</summary>
  *Note: The point of this set of instructions is to answer "In what ways do members and casual riders use Cyclistic bikes differently?". * We can use R to answer other questions as well.
   
 * In my opinion, to save on typing, you should copy the instructions listed at the top of this page into a new R script or copy [mine](https://github.com/schmiedel1992/Capstone-Case-Study-Projects/blob/main/Case%20Study%201-%20Cyclistic%20Bike-Share%20Analysis/R%20Results/cyclistic_script.R), which is what I did.
 * File tab > New File > R Script. Copy the instructions and paste them into your new script, then: File tab > Save As > cyclistic_script.r *(or whatever file name you like).* 
   
 <details>
-  <summary>**Instructions**</summary>
+  <summary>Instructions</summary>
   
 <ol>
-<li> We potentially need to install tidyverse. * It's likely you already have it installed if you took the Coursera Google Data Analytics course and followed their instructions word for word. You installed tidyverse like 15 times. * </li>
+<li> We potentially need to install tidyverse. *It's likely you already have it installed if you took the Coursera Google Data Analytics course and followed their instructions word for word. You installed tidyverse like 15 times.* </li>
 <details>
-  <summary>**Install and load packages**</summary>
+  <summary>Install and load packages</summary>
 
 * We do not need "lubridate" and "ggplot2" installed because "tidyverse" already comes with them. *
 ```{r}
@@ -79,7 +79,7 @@ getwd()
   
 <li> It's time to upload the CSV files we cleaned earlier. </li>
     <details>
-    <summary>**CSV files**</summary>
+    <summary>CSV files</summary>
       *Simple file names mean less typing*
       
 ```{r}
@@ -103,7 +103,7 @@ db12 <- read_csv("202403-tripdata.csv")
   
 <li> Check once again that all 12 column names are consistent. </li>
   <details>
-    <summary>**Checking column names**</summary>
+    <summary>Checking column names</summary>
     
 ```{r}
 colnames(db1)
@@ -124,7 +124,7 @@ colnames(db12)
   
 <li> There is no need to rename columns or use mutate() on "ride_id" or "rideable_type" if you're using data after 2020. </li>
     <details>
- <summary>**Double checking column names**</summary>
+ <summary>Double checking column names</summary>
   *Simply check the structure of each file*
   
 ```{r}
@@ -153,11 +153,11 @@ str(db12)
 ## Cleaning & Combining
 
   <details>
-    <summary>**Details**</summary>
+    <summary>Details</summary>
 <ol>
  <li>Making one large data frame.</li> 
  <details>
- <summary>**Combining**</summary>
+ <summary>Combining</summary>
 ```{r}
 all_trips <- bind_rows(db1,db2,db3,db4,db5,db6,db7,db8,db9,db10,db11,db12) 
 ```
@@ -168,7 +168,7 @@ all_trips <- bind_rows(db1,db2,db3,db4,db5,db6,db7,db8,db9,db10,db11,db12)
 
 <li> Changing "ride_length" to cooperate with us. </li> 
 <details>
-  <summary>**Changing "ride_length"**</summary>
+  <summary>Changing "ride_length"</summary>
 <details>
 ```{r}
 all_trips$ride_length <- as.numeric(as.POSIXlt(all_trips$ride_length, format = "%H:%M:%S"))
@@ -179,7 +179,7 @@ all_trips$ride_length <- as.numeric(as.POSIXlt(all_trips$ride_length, format = "
   
 <li> Inspecting the new table we've created. </li>  
 <details>
-  <summary>**Inspection syntax**</summary>
+  <summary>Inspection syntax</summary>
   *This is all important information about our data frame.*
 ```{r}
 colnames(all_trips)# List of column names
@@ -194,7 +194,7 @@ summary(all_trips)# Statistical summary of data. Mainly for numerics
   
 <li> There is no need to use mutate() on "member_casual" which only applies to data from 2020 and older. </li>   
 <details>
-  <summary>**Checking column "member_casual"**</summary>
+  <summary>Checking column "member_casual"</summary>
     *Run this code to prove to yourself that you're in the clear*
 ```{r}
 distinct_values <- unique(all_trips$member_casual)
@@ -218,7 +218,7 @@ all_trips$date <- as.Date(all_trips$started_at, format = "%m/%d/%Y %H:%M")
 
 <li> Adding columns: month, day, and year of each ride. Plus, altering the day_of_week column. </em>       
 <details>
- <summary>**Adding columns**</summary>
+ <summary>Adding columns</summary>
 ```{r}
 all_trips$month <- format(as.Date(all_trips$date), "%m")
 all_trips$day <- format(as.Date(all_trips$date), "%d")
@@ -230,7 +230,7 @@ all_trips$day_of_week <- format(as.Date(all_trips$date), "%A")
 
 <li> Removing bad data.</li> 
 <details>
-  <summary>**Removing negative numbers**</summary>
+  <summary>Removing negative numbers</summary>
    *We already took care of this in our Excel work.*
 ```{r}
 all_trips_v2 <- all_trips[!(all_trips$start_station_name == "HQ QR" | all_trips$ride_length<0),]
@@ -245,7 +245,7 @@ all_trips_v2 <- all_trips[!(all_trips$start_station_name == "HQ QR" | all_trips$
 ## Analysis
 
 <details>
-<summary>**"ride_length" Summaries:**</summary>
+<summary>"ride_length" Summaries:</summary>
 *Time for descriptive analysis on ride_length (all figures in seconds)*
 ```{r}
 mean(all_trips_v2$ride_length)
@@ -258,7 +258,7 @@ summary(all_trips_v2$ride_length)
 </details>
 
 <details>
-<summary>**Rider Type Summaries:**</summary>
+<summary>Rider Type Summaries:</summary>
 *Compare members and casual users*
 ```{r}
 aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual, FUN = mean)
@@ -270,7 +270,7 @@ aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual, FUN = min)
 </details>
 
 <details>
-<summary>**Average Ride Time by Day by User Type:**</summary>
+<summary>Average Ride Time by Day by User Type:</summary>
 *First, we should put the days of the week in order.*
 ```{r}
 all_trips_v2$day_of_week <- ordered(all_trips_v2$day_of_week, levels=c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"))
@@ -287,7 +287,7 @@ aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual + all_trips_v2$d
 </details>
 
 <details>
-<summary>**Rider Data by Type and Weekday:**</summary>
+<summary>Rider Data by Type and Weekday:</summary>
 *Another place where we must __first__ format to utilize further investigations*
 ```{r}
 all_trips_v2 <- all_trips_v2 %>% mutate(started_at = as.POSIXct(started_at, format = "%m/%d/%Y %H:%M"))
@@ -310,7 +310,7 @@ all_trips_v2 %>%
 
 
 <details>
-<summary>**Total Annual Rides by Weekday, per Rider Type:**</summary>
+<summary>Total Annual Rides by Weekday, per Rider Type:</summary>
 *The first visual product the instructions seek to produce is this code. I pasted my results in the exporting section.*
 
 ```{r}
@@ -332,7 +332,7 @@ all_trips_v2 %>%
 
 
 <details>
-<summary>**Average Annual Ride Duration by Weekday per Rider Type:**</summary>
+<summary>Average Annual Ride Duration by Weekday per Rider Type:</summary>
 *The second visual product the instructions seek to produce is this code. I pasted my results in the exporting section.*
 ```{r}
 all_trips_v2 %>%
@@ -355,7 +355,7 @@ all_trips_v2 %>%
 ## Exporting
 
 <details>
-<summary>**How to export:**</summary> 
+<summary>How to export:</summary> 
 
 <ol>
 <li>**You need to choose your file format:**</li>
@@ -386,7 +386,7 @@ This is what you're picking to export
 write.csv(all_trips$ride_length) 
 ```
 
-<li>**You need to choose your file path:**</li>
+<li>You need to choose your file path:</li>
 *Inside your export function, use the parameter syntax: file = "your destination" *
 
 This will save to your current R directory
@@ -408,7 +408,7 @@ write.csv(all_trips, file = "D:/Merit/all_trips.csv", row.names = FALSE)
 *At times, this involves first using data.frame(), but you can export whatever you want* for example: 
 
 <details>
-<summary>**Combining**</summary>
+<summary>Combining</summary>
   
 * When you combine your 12 sheets into one data frame
 * If you make a custom data frame for detailed specifics
@@ -417,7 +417,7 @@ write.csv(all_trips, file = "D:/Merit/all_trips.csv", row.names = FALSE)
 </details>
 
 <details>
-<summary>**Analysis**</summary>
+<summary>Analysis</summary>
   
 * "ride_length" summaries
 * Rider-type summaries
@@ -427,7 +427,7 @@ write.csv(all_trips, file = "D:/Merit/all_trips.csv", row.names = FALSE)
 </details>
 
 <details>
-<summary>**What the Default Instructions Have You Export:**</summary>
+<summary>What the Default Instructions Have You Export:</summary>
   
 *counts is just the variable name for the data to export*
 ```{r}
@@ -447,7 +447,7 @@ write.csv(counts, file = file_path, row.names = FALSE)
 </details>
 
 <details>
-<summary>**The Final Product: Visualizations**</summary>
+<summary>The Final Product: Visualizations</summary>
   *These two images are the results the R instructions are seeking*
   
 * Total Annual Rides by Weekday per Rider Type:
@@ -471,7 +471,7 @@ write.csv(counts, file = file_path, row.names = FALSE)
 ## R Markdown - Bringing it all together
 
 <details>
-<summary>**R Markdown file**</summary>
+<summary>R Markdown file</summary>
 *I used an Rmd file as an opportunity to answer the questions from the case study and show my R syntax.*
 
 * R Markdown is a Markdown file exclusively for R. Markdown files are a lightweight markup language akin to HTML. HTML is very simple and similar to something we covered in SQL. Neither is a programming language. SQL is a query language. HTML is a markup language and the foundation of all websites.
