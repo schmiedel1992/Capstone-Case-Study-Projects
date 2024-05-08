@@ -161,11 +161,8 @@ str(db12)
 ```{r}
 all_trips <- bind_rows(db1,db2,db3,db4,db5,db6,db7,db8,db9,db10,db11,db12) 
 ```
-
 </details>
-  
 </details>
-
 <li> Changing "ride_length" to cooperate with us. </li> 
 <details>
   <summary>Changing "ride_length"</summary>
@@ -173,13 +170,11 @@ all_trips <- bind_rows(db1,db2,db3,db4,db5,db6,db7,db8,db9,db10,db11,db12)
 ```{r}
 all_trips$ride_length <- as.numeric(as.POSIXlt(all_trips$ride_length, format = "%H:%M:%S"))
 ```
-
 </details> 
 </details>  
-  
 <li> Inspecting the new table we've created. </li>  
 <details>
-  <summary>Inspection syntax</summary>
+ <summary>Inspection syntax</summary>
   *This is all important information about our data frame.*
 ```{r}
 colnames(all_trips)# List of column names
@@ -189,8 +184,7 @@ head(all_trips)# See the first 6 rows of data frame.
 str(all_trips)# See list of columns and data types (numeric, character, etc)
 summary(all_trips)# Statistical summary of data. Mainly for numerics
 ```
-  
-</details>  
+  </details>  
   
 <li> There is no need to use mutate() on "member_casual" which only applies to data from 2020 and older. </li>   
 <details>
