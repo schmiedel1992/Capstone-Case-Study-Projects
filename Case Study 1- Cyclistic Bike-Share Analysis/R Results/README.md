@@ -494,6 +494,6 @@ I am open to criticism. Please contact me via email or LinkedIn for any correcti
 
 
 -   [LinkedIn](https://www.linkedin.com/in/amanda-schmiedel/)
--   [amanda\schmiedel@gmail.com](mailto:amanda.schmiedel@gmail.com){.email}
+-   [amanda.schmiedel@gmail.com](mailto:amanda.schmiedel@gmail.com)
 
 **Thank you**
