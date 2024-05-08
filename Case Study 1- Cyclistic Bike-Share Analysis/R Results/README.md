@@ -150,10 +150,9 @@ str(db12)
 </details>
 </details>
   
-## Cleaning & Combining
-
-  <details>
-    <summary>Details</summary>
+## Cleaning & Combining 
+<details>
+<summary>Details</summary>
 <ol>
  <li>Making one large data frame.</li> 
  <details>
@@ -162,15 +161,13 @@ str(db12)
 all_trips <- bind_rows(db1,db2,db3,db4,db5,db6,db7,db8,db9,db10,db11,db12) 
 ```
 </details>
-</details>
 <li> Changing "ride_length" to cooperate with us. </li> 
 <details>
-  <summary>Changing "ride_length"</summary>
+<summary>Changing "ride_length"</summary>
 <details>
 ```{r}
 all_trips$ride_length <- as.numeric(as.POSIXlt(all_trips$ride_length, format = "%H:%M:%S"))
 ```
-</details> 
 </details>  
 <li> Inspecting the new table we've created. </li>  
 <details>
