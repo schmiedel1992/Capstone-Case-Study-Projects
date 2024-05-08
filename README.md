@@ -1,9 +1,3 @@
----
-title: "Cyclistic Case Study"
-author: "Amanda Schmiedel"
-date: "`r Sys.Date()`"
-output: html_document
----
 
 <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=amanda-schmiedel" target="_blank">Follow on LinkedIn</a>
 
