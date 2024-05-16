@@ -13,8 +13,8 @@ Email: amanda.schmiedel@gmail.com
 
 ## Case Studies
 
-Case Study 1: How Does a Bike-Share Navigate Speedy Success? 
+Case Study 1: Cyclistic Bike-Share Analysis 
 
-Case Study 2: How Can a Wellness Technology Company Play It Smart?
+Case Study 2: Bellabeat Analysis
 
-Case Study 3: Choose Your Own Adventure 
+Case Study 3: Home Finances Analysis
