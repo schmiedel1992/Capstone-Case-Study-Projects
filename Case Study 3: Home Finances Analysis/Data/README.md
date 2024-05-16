@@ -1,7 +1,4 @@
----
-title: "Data Source"
-output: html_notebook
----
+
 <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=amanda-schmiedel" target="_blank">Follow on LinkedIn</a>
 
 
@@ -12,7 +9,7 @@ output: html_notebook
 
 <ol>
 
-<li>**Access accounts.**</li>
+<li>__Access accounts.__</li>
 * Verve, Lowes, Capital One, Connexus
  
 <li>**Download transactions from 01/01/2024-04/30/2024.**</li>
