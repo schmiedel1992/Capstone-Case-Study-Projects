@@ -1,4 +1,3 @@
-
 <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=amanda-schmiedel" target="_blank">Follow on LinkedIn</a>
 
 
@@ -26,9 +25,9 @@
 ## Raw Data Links
 
 <details>
-<summary><strong>Account Data</strong></summary>
+<summary>Account Data</summary>
 
-<li><strong>Verve<strong></li>
+<li>Verve</li>
 * [PersonalUse](https://1drv.ms/x/c/6f380362ed6cd989/EQ9QOUX3cehNnKlnx4dUj3UBXu_d7ZVSpj05CzBFiv0IMg?e=CnJh4O)
 * [BillsNoTouchy](https://1drv.ms/x/c/6f380362ed6cd989/Efl0jtm0GeNMorKiFeYNe5UBC5Q29pDk4_-iZ52USu2nBA?e=CILEsx)
 * [TractorFund](https://1drv.ms/x/c/6f380362ed6cd989/EfG8JWJQq7RCnxO_VNrcy1YBDEQPvWCC58_h7lbYM3E35g?e=dhJL09)
@@ -38,16 +37,16 @@
 * [SigLoan982](https://1drv.ms/x/c/6f380362ed6cd989/ESDK6bAZpuJElOV5Uyv2cpQBIF5ZEJ01H2WF5xiEA5HyZw?e=0sR3sn)
 * [ERCredit](https://1drv.ms/x/c/6f380362ed6cd989/EXD35ravJ6dHv1KMgCPX2-MBRppCoVQhaRWFPLzaM9OJPg?e=Y39Urg)
 
-<li><strong>Connexus</strong></li>
+<li>Connexus</li>
 * [Connexus](https://1drv.ms/x/c/6f380362ed6cd989/Ec8Pnx9FcMRBovCpXBNp0bIB7hBDo_EWOMeWYi_4ECL9aA?e=c7fB7m)
 
-<li><strong>Capital One</strong></li>
+<li>Capital One</li>
 * [CapitalOne](https://1drv.ms/x/c/6f380362ed6cd989/EUNJ6kv5akNNsztlCKVQvLABqCGJ8ksdjP7kots9tv20dg?e=EczuYG)
 
-<li><strong>Lowes</strong></li>
+<li>Lowes</li>
 * [Lowes](https://1drv.ms/x/c/6f380362ed6cd989/EcwRDB8HVVtMpgtBC1znBDsBKeODfY-HIt8jIt4LdyFWJw?e=IzRKWf)
 
-<li><strong>Personal Spreadsheets</strong></li>
+<li>Personal Spreadsheets</li>
 * [RonniePaycheck](https://1drv.ms/x/c/6f380362ed6cd989/EdeUvCEsRglIlYclDZ79y3cBnLN6kwrXRLajYEG4XcCxnA?e=E7pCeq)
 * [ByCheck](https://1drv.ms/x/c/6f380362ed6cd989/ETigdSDZtthFj81ZcFC0VckBUFIO1eAK_AOYbtJvmEUB9A?e=9RPIkR)
 * [MonthlyBills](https://1drv.ms/x/c/6f380362ed6cd989/EZSuNALdAbFGgM0mnaYs6GUBZvwxl2DttmKGtUP0EmUHsA?e=GudBA6)
@@ -63,5 +62,4 @@ I am open to criticism. Please contact me via email or LinkedIn for any correcti
 
 -   [LinkedIn](https://www.linkedin.com/in/amanda-schmiedel/)
 -   [amanda\schmiedel@gmail.com](mailto:amanda.schmiedel@gmail.com)
-
 
