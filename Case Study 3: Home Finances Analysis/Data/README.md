@@ -4,19 +4,19 @@
 ## Downloading Stakeholders Data
 
 <details>
-<summary><strong>Downloading data</strong></summary>
+<summary>Downloading data</summary>
 
 <ol>
 
-<li><strong>Access accounts.</strong></li>
+<li>Access accounts</li>
 * Verve, Lowes, Capital One, Connexus
  
-<li><strong>Download transactions from 01/01/2024-04/30/2024.</strong></li>
+<li>Download transactions from 01/01/2024-04/30/2024.</li>
 
-<li><strong>Bank statements downloaded as csv files</strong></li>
+<li>Bank statements downloaded as csv files</li>
 * Lowes had monthly pdf statements. Combined into a single csv file
  
-<li><strong>Personal spreadsheets.</strong></li>
+<li>Personal spreadsheets.</li>
 * RonniePaycheck, MonthlyBills and ByCheck were created by me. Paystub pdfs did not import into excel easily, entered data manually (have been all year). Some overtime pay is listed incorrectly (company knowledge) hours and actual pay are correct, used to correct hourly pay rate.
 
 </details>
