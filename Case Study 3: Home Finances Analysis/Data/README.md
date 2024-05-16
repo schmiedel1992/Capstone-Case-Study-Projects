@@ -32,25 +32,30 @@ output: html_notebook
 <summary>Account Data</summary>
 
 <li>Verve</li>
+
 * [PersonalUse](https://1drv.ms/x/c/6f380362ed6cd989/EQ9QOUX3cehNnKlnx4dUj3UBXu_d7ZVSpj05CzBFiv0IMg?e=CnJh4O)
-* [BillsNoTouchy](https://1drv.ms/x/c/6f380362ed6cd989/Efl0jtm0GeNMorKiFeYNe5UBC5Q29pDk4_-iZ52USu2nBA?e=CILEsx)
-* [TractorFund](https://1drv.ms/x/c/6f380362ed6cd989/EfG8JWJQq7RCnxO_VNrcy1YBDEQPvWCC58_h7lbYM3E35g?e=dhJL09)
-* [BuildingFund](https://1drv.ms/x/c/6f380362ed6cd989/EQbVptMW-9JItqOzBpoma_MBfQ2caWDAATSHkXd132mdAw?e=ytK7FD)
-* [Surgery](https://1drv.ms/x/c/6f380362ed6cd989/ETXtJLOZGYREg7gRlkXf7scBK00oFE5XTF1F9z53PkEXPQ?e=qcXyUV)
-* [SigLoan657](https://1drv.ms/x/c/6f380362ed6cd989/EaTSx_fzqPxNquNuEOHDI3oBoINlkyBQ7qYTFTzNhs5mBg?e=cO183D)
-* [SigLoan982](https://1drv.ms/x/c/6f380362ed6cd989/ESDK6bAZpuJElOV5Uyv2cpQBIF5ZEJ01H2WF5xiEA5HyZw?e=0sR3sn)
+* [BillsNoTouchy](https://1drv.ms/x/c/6f380362ed6cd989/Efl0jtm0GeNMorKiFeYNe5UBC5Q29pDk4_-iZ52USu2nBA?e=CILEsx)  
+* [TractorFund](https://1drv.ms/x/c/6f380362ed6cd989/EfG8JWJQq7RCnxO_VNrcy1YBDEQPvWCC58_h7lbYM3E35g?e=dhJL09)  
+* [BuildingFund](https://1drv.ms/x/c/6f380362ed6cd989/EQbVptMW-9JItqOzBpoma_MBfQ2caWDAATSHkXd132mdAw?e=ytK7FD)  
+* [Surgery](https://1drv.ms/x/c/6f380362ed6cd989/ETXtJLOZGYREg7gRlkXf7scBK00oFE5XTF1F9z53PkEXPQ?e=qcXyUV)  
+* [SigLoan657](https://1drv.ms/x/c/6f380362ed6cd989/EaTSx_fzqPxNquNuEOHDI3oBoINlkyBQ7qYTFTzNhs5mBg?e=cO183D)  
+* [SigLoan982](https://1drv.ms/x/c/6f380362ed6cd989/ESDK6bAZpuJElOV5Uyv2cpQBIF5ZEJ01H2WF5xiEA5HyZw?e=0sR3sn)  
 * [ERCredit](https://1drv.ms/x/c/6f380362ed6cd989/EXD35ravJ6dHv1KMgCPX2-MBRppCoVQhaRWFPLzaM9OJPg?e=Y39Urg)
 
 <li>Connexus</li>
+
 * [Connexus](https://1drv.ms/x/c/6f380362ed6cd989/Ec8Pnx9FcMRBovCpXBNp0bIB7hBDo_EWOMeWYi_4ECL9aA?e=c7fB7m)
 
 <li>Capital One</li>
+
 * [CapitalOne](https://1drv.ms/x/c/6f380362ed6cd989/EUNJ6kv5akNNsztlCKVQvLABqCGJ8ksdjP7kots9tv20dg?e=EczuYG)
 
 <li>Lowes</li>
+
 * [Lowes](https://1drv.ms/x/c/6f380362ed6cd989/EcwRDB8HVVtMpgtBC1znBDsBKeODfY-HIt8jIt4LdyFWJw?e=IzRKWf)
 
 <li>Personal Spreadsheets</li>
+
 * [RonniePaycheck](https://1drv.ms/x/c/6f380362ed6cd989/EdeUvCEsRglIlYclDZ79y3cBnLN6kwrXRLajYEG4XcCxnA?e=E7pCeq)
 * [ByCheck](https://1drv.ms/x/c/6f380362ed6cd989/ETigdSDZtthFj81ZcFC0VckBUFIO1eAK_AOYbtJvmEUB9A?e=9RPIkR)
 * [MonthlyBills](https://1drv.ms/x/c/6f380362ed6cd989/EZSuNALdAbFGgM0mnaYs6GUBZvwxl2DttmKGtUP0EmUHsA?e=GudBA6)
