@@ -55,6 +55,7 @@
 
 
 ## Summary
+
 This is all the data used in my analysis. Check out my results for Microsoft, R and Tableau.
 I am open to criticism. Please contact me via email or LinkedIn for any corrections, improvements, or suggestions.
 
