@@ -442,10 +442,10 @@ write.csv(counts, file = file_path, row.names = FALSE)
   *These two images are the results the R instructions are seeking*
   
 * Total Annual Rides by Weekday per Rider Type:
-![Total Annual Rides by Weekday]("C:\Users\Amanda\OneDrive\Desktop\Capstone\Cyclistic\R\Total Annual Rides by Weekday.png")
+[Total Annual Rides by Weekday](C:\Users\Amanda\OneDrive\Desktop\Capstone\Cyclistic\R\Total Annual Rides by Weekday.png)
 
 * Average Annual Ride Duration by Weekday per Rider Type:
-![Average Annual Ride Duration by Weekday]("C:\Users\Amanda\OneDrive\Desktop\Capstone\Cyclistic\R\Average Annual Ride Duration by Weekday.png")
+[Average Annual Ride Duration by Weekday](C:\Users\Amanda\OneDrive\Desktop\Capstone\Cyclistic\R\Average Annual Ride Duration by Weekday.png)
 
 
 
